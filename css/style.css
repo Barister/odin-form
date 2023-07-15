@@ -1,37 +1,144 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("../fonts/Norse-Bold.otf") format("opentype");
+}
 * {
-   box-sizing: border-box;
-   padding: 0;
-   margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 .wrapper {
-   background: url('../img/form-background.jpg') no-repeat center/100%;
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   max-width: 1440px;
-   margin: 0 auto;
+  background: url("../img/form-background.jpg") top left/100% 100% no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .container {
-   width: min(80ch, 100vw - 2rem);
+  width: min(80ch, 100vw - 2rem);
 }
 
 .aside {
-   flex: 33.3%;
+  flex: 30%;
+  position: relative;
 }
-.label {
-}
-.logo {
-}
-.main {
-   flex: 66.7%;
-   background: #fff;
-		&__text {
-		}
 
-		&__form {
-		}
+.label {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  font-family: "Norse Bold", sans-serif;
+  text-align: center;
 }
+.label::after {
+  background-color: rgb(1, 1, 1);
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.label span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: #fff;
+  font-size: min(40px, 4rem);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  letter-spacing: 3px;
+}
+.label span:nth-of-type(2) {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-top: 2px solid #fff;
+}
+
+.main {
+  flex: 70%;
+  background: #f6f6f7;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+.main__text {
+  flex: 37%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0px 0px 3rem 3rem;
+  gap: 2rem;
+  font-weight: 700;
+  max-width: 58ch;
+}
+.main__form {
+  flex: 63%;
+  position: relative;
+}
+.main__form legend {
+  font-weight: 700;
+  position: absolute;
+  top: 2rem;
+}
+.main__form fieldset {
+  padding: 6rem 0px 3rem 3rem;
+  border: none;
+}
+.main__form fieldset:nth-of-type(1) {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 20rem);
+  row-gap: 1.5rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+.main__form fieldset:nth-of-type(1) label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+.main__form fieldset:nth-of-type(1) label input {
+  display: block;
+  width: 200px;
+  padding: 0.3rem;
+}
+.main__form fieldset:nth-of-type(2) {
+  padding: 3rem 0px 3rem 3rem;
+}
+.main__form button {
+  box-shadow: none;
+  border: none;
+  background-color: #596d48;
+  padding: 1rem 4rem;
+  font-weight: 700;
+  border-radius: 7px;
+  color: #fff;
+}
+
 .calltologin {
+  padding: 0px 0px 0 3rem;
+  font-size: 1.4rem;
+}
+.calltologin a {
+  text-decoration: none;
+  color: #596d48;
+  font-weight: 700;
 }
