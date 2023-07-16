@@ -6,7 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>The Odin Form</title>
-   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="css/style.css">
+   <meta name="robots" content="index, follow">
 </head>
 
 <body>
@@ -14,9 +15,14 @@
       <aside class="aside">
          <div class="label">
             <!-- <img src="" alt="" class="logo"> -->
-            <span>Opsa</span>
-            <span>Karelia</span>
+            <a href="https://opsa-karelia.ru">
+               <span>Opsa</span>
+               <span>Karelia</span>
+            </a>
          </div>
+         <footer>
+            <p>photo by <a href="https://instagram.com/kadi_luck">kadi luck</a></p>
+         </footer>
       </aside>
       <main class="main">
          <div class="main__text">
@@ -34,27 +40,27 @@
                   <legend>Let's do this!</legend>
                   <label for="name">
                      First Name
-                     <input id="name" type="text">
+                     <input id="name" type="text" name="name">
                   </label>
                   <label for="surname">
                      Last Name
-                     <input id="surname" type="text">
+                     <input id="surname" type="text" name="surname">
                   </label>
                   <label for="email">
                      Email
-                     <input id="email" type="email">
+                     <input id="email" type="email" name="email">
                   </label>
                   <label for="phone">
                      Phone Number
-                     <input id="phone" type="phone">
+                     <input id="phone" type="phone" name="phone">
                   </label>
                   <label for="password">
                      Password
-                     <input id="password" type="password">
+                     <input id="password" class="error" type="password" name="password">
                   </label>
                   <label for="confirm">
                      Confirm Password
-                     <input id="confirm" type="password">
+                     <input id="confirm" class="error" type="password" name="confirm">
                   </label>
                </fieldset>
                <fieldset>
