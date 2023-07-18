@@ -10,10 +10,14 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   font-size: 1.6rem;
+  height: 100%;
+  width: 100%;
 }
 
 button, input {
@@ -31,12 +35,17 @@ a {
 
 .wrapper {
   background: url("../img/form-background.jpg") top left/100% 100% no-repeat;
-  height: 100vh;
-  width: 100vw;
+  background-size: cover;
   display: flex;
   max-width: 1024px;
+  min-height: 100%;
   margin: 0 auto;
-  overflow: hidden;
+}
+@media (max-width: 525px) {
+  .wrapper {
+    display: block;
+    background-size: auto 100vh;
+  }
 }
 
 .container {
@@ -44,7 +53,8 @@ a {
 }
 
 .aside {
-  flex: 30%;
+  flex: 1 0 250px;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -103,18 +113,19 @@ a {
 }
 
 .main {
-  flex: 70%;
+  flex: 1 1 70%;
   background: #f6f6f7;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
+  padding: 40px 0px 40px 0px;
 }
 .main__text {
-  flex: 37%;
+  flex: 1 1 37%;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 0px 0px 3rem 3rem;
+  padding: 0px 3rem 3rem 3rem;
   gap: 2rem;
   font-weight: 700;
   max-width: 58ch;
@@ -129,13 +140,13 @@ a {
   top: 2rem;
 }
 .main__form fieldset {
-  padding: 6rem 0px 3rem 3rem;
+  padding: 6rem 3rem 3rem 3rem;
   border: none;
 }
 .main__form fieldset:nth-of-type(1) {
   background-color: #fff;
   display: grid;
-  grid-template-columns: repeat(2, 20rem);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   row-gap: 1.5rem;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
@@ -148,7 +159,7 @@ a {
 }
 .main__form fieldset:nth-of-type(1) label input {
   display: block;
-  width: 200px;
+  width: min(250px, 100%);
   padding: 0.5rem 0.9rem;
   font-size: 1.1rem;
   border: 1px solid #e5e7eb;
