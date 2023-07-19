@@ -127,7 +127,6 @@ a {
   justify-content: end;
   padding: 0px 3rem 3rem 3rem;
   gap: 2rem;
-  font-weight: 700;
   max-width: 58ch;
 }
 .main__form {
@@ -147,11 +146,12 @@ a {
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  row-gap: 1.5rem;
+  row-gap: 1.8rem;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
 }
 .main__form fieldset:nth-of-type(1) label {
+  position: relative;
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 0.7px;
@@ -171,8 +171,17 @@ a {
   outline: none;
   box-shadow: 2px 2px 2px rgba(89, 109, 72, 0.3);
 }
-.main__form fieldset:nth-of-type(1) label input.error {
+.main__form fieldset:nth-of-type(1) label input:invalid {
   border: 1px solid rgb(205, 0, 0) !important;
+}
+.main__form fieldset:nth-of-type(1) label input:focus:invalid {
+  border: none;
+}
+.main__form fieldset:nth-of-type(1) label input + span.error {
+  color: rgb(205, 0, 0);
+  text-transform: none;
+  position: absolute;
+  top: 37px;
 }
 .main__form fieldset:nth-of-type(2) {
   padding: 3rem 0px 3rem 3rem;

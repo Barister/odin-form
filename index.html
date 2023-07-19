@@ -14,7 +14,6 @@
    <div class="wrapper">
       <aside class="aside">
          <div class="label">
-            <!-- <img src="" alt="" class="logo"> -->
             <a href="https://opsa-karelia.ru">
                <span>Opsa</span>
                <span>Karelia</span>
@@ -26,7 +25,10 @@
       </aside>
       <main class="main">
          <div class="main__text">
-
+            <h1>Welcome to <a href="https://opsa-karelia.ru">Opsa.Karelia</a></h1>
+            <p>Our guesthouse complex is located in one of the most picturesque places in Russian Karelia, on the banks
+               of the
+               Olonka River, 20 km from the ancient town Olonets and 5 km from the majestic Ladoga Lake.</p>
             <p>This is not a real online service! You know you need something like this in your life to help you
                realize
                your deepest dreams. Sign up <em>now</em> to get started.</p>
@@ -34,33 +36,39 @@
 
          </div>
          <div class="main__form">
-            <!-- <div class="container"> -->
-            <form action="">
+
+            <form action="" novalidate>
                <fieldset>
                   <legend>Let's do this!</legend>
                   <label for="name">
-                     First Name
-                     <input id="name" type="text" name="name">
+                     First Name*
+                     <input id="name" type="text" name="name" minlength="2">
+                     <span class="error" aria-live="polite"></span>
                   </label>
+
                   <label for="surname">
                      Last Name
                      <input id="surname" type="text" name="surname">
                   </label>
                   <label for="email">
-                     Email
+                     Email*
                      <input id="email" type="email" name="email">
+                     <span class="error" aria-live="polite"></span>
                   </label>
                   <label for="phone">
                      Phone Number
                      <input id="phone" type="phone" name="phone">
+                     <span class="error" aria-live="polite"></span>
                   </label>
                   <label for="password">
-                     Password
-                     <input id="password" class="error" type="password" name="password" required minlength="8">
+                     Password*
+                     <input id="password" class="" type="password" name="password" required minlength="8">
+                     <span class="error" aria-live="polite"></span>
                   </label>
                   <label for="confirm">
                      Confirm Password
-                     <input id="confirm" class="error" type="password" name="confirm" required minlength="8">
+                     <input id="confirm" class="" type="password" name="confirm" required minlength="8">
+                     <span class="error" aria-live="polite"></span>
                   </label>
                </fieldset>
                <fieldset>
@@ -78,6 +86,7 @@
       </main>
 
    </div>
+   <script src="js/script.js"></script>
 </body>
 
 </html>
