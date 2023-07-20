@@ -50,6 +50,14 @@ a {
   .wrapper {
     display: block;
     background: url("../img/form-background.jpg") no-repeat;
+    background-size: auto 100vh;
+  }
+}
+@media (max-width: 525px) and (max-height: 250px) {
+  .wrapper {
+    display: block;
+    background: url("../img/form-background.jpg") no-repeat;
+    background-size: 100vw auto;
   }
 }
 
