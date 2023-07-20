@@ -68,8 +68,10 @@ form.addEventListener('submit', function (event) {
             let inputReq = element.querySelector('input');
 
             inputReq.required = 'true';
-            inputReq.validity.valid;
 
+            if (!inputReq.validity.valid) {
+               event.preventDefault();
+            }
          }
       })
    }
